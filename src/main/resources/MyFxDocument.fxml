@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gasyidea.sms.fx.MyController">
+    <children>
+        <Button fx:id="startButton" contentDisplay="CENTER" layoutX="242.0" layoutY="126.0" mnemonicParsing="false" onAction="#runServer" text="Start">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+            <effect>
+                <Lighting diffuseConstant="2.0" specularConstant="0.2" specularExponent="6.34" surfaceScale="2.72">
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                </Lighting>
+            </effect>
+            <cursor>
+                <Cursor fx:constant="N_RESIZE" />
+            </cursor>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="321.0" layoutY="126.0" mnemonicParsing="false" onAction="#stopServer" text="Cancel">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+            <effect>
+                <Lighting diffuseConstant="2.0" specularConstant="1.84" specularExponent="40.0" surfaceScale="2.72">
+                    <bumpInput>
+                        <Shadow />
+                    </bumpInput>
+                </Lighting>
+            </effect>
+        </Button>
+        <Button fx:id="chooseButton" layoutX="330.0" layoutY="44.0" mnemonicParsing="false" onAction="#chooseDirectory" text="Folder" />
+        <TextField fx:id="pathText" layoutX="41.0" layoutY="44.0" prefHeight="31.0" prefWidth="279.0" text="D:/retros" />
+        <TextArea fx:id="myLogArea" layoutX="31.0" layoutY="200.0" prefHeight="170.0" prefWidth="547.0" />
+    </children>
+</Pane>
